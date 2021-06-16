@@ -5,26 +5,37 @@ CLI Okta user account management.
 ## Usage
 
 ``` sh
-Usage: <command> [options] --env [string]
+Usage: <command> [options]
 
 Commands:
-  okty.js init [options]         initialise environment, configure orgUrl and ke
-                                 y that will be used for subsequent commands.
-  okty.js listUsers [options]    list users (with search and filter options)
-  okty.js importUsers [options]  import users from csv file
-  okty.js getUser [options]      get user details
-  okty.js deleteUser [options]   delete user
+  okty.js init [options]            initialise environment, configure orgUrl and
+                                     key that will be used for subsequent comman
+                                    ds.
+  okty.js listUsers [options]       list users (with search and filter options)
+  okty.js importUsers [options]     import users from csv file
+  okty.js getUser <id|login>        get user details by id or login
+  okty.js deleteUser <id|login>     delete user
+  okty.js updateUser <id|login>     update user details
+  okty.js getUserGroups <id|login>  get groups that user is assigned to.
+  okty.js getUserApps <id|login>    get applications that user is linked to eith
+                                    er directly or indirectly (via group members
+                                    hip)
+  okty.js listGroups [options]      list groups (with find and filter options)
+  okty.js getGroup <id>             get group details by id
+  okty.js getGroupUsers <id>        get applications that user is linked to eith
+                                    er directly or indirectly (via group members
+                                    hip)
 
 Options:
       --version  Show version number                                   [boolean]
   -h, --help     Show help                                             [boolean]
 
 Examples:
-  okty init --orgUrl https://{domain}.okta.com --token 00Uj4jXul6Md3ND82ODaQKu
+  okty init --orgUrl https://{domain}.okta.com --token 11Uj4jXul6Md3ND82ODaQKu
   vOzDNq2_1lWcK168Y5W
   okty listUsers
 
-Org URL: https://{org}-admin.okta.com
+Org URL: not set, run okty init first!
 Call okty <commmand> -h to get usage for command.
 
 ```
