@@ -1,9 +1,13 @@
 {
-  "name": "okty",
-  "type": "module",
-  "homepage": "https://github.com/dflynn-bunnings/okty",
+  "name": "@dflynn-bunnings/okty",
   "version": "1.0.0",
   "description": "CLI for Okta user management",
+  "type": "module",
+  "homepage": "https://github.com/dflynn-bunnings/okty",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dflynn-bunnings/okty.git"
+  },  
   "main": "./src/okty.js",
   "bin": "./src/okty.js",
   "scripts": {
@@ -16,10 +20,10 @@
     "cli"
   ],
   "publishConfig": {
-    "dflynn-bunnings:registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "author": "David Flynn",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "eslint": "^7.30.0",
     "eslint-config-standard": "^16.0.3",
