@@ -11,7 +11,7 @@ export const builder = (yargs) => {
       alias: 'o',
       description: 'specify output format',
       choices: ['table', 'json', 'csv'],
-      coerce: (opt => opt.toLowerCase())
+      coerce: opt => opt.toLowerCase()
     });
 }
 export function handler(argv) {
