@@ -15,6 +15,9 @@
     "okta",
     "cli"
   ],
+  "publishConfig": {
+    "dflynn-bunnings:registry": "https://npm.pkg.github.com"
+  },
   "author": "David Flynn",
   "license": "ISC",
   "devDependencies": {
