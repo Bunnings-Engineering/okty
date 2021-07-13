@@ -34,11 +34,7 @@ function toOktaUser(user, groupIds) {
         hook: {
           type: 'default'
         }
-      }/*,
-      recovery_question: {
-        question: user.recovertQ,
-        answer: user.recovertA
-      }*/
+      }
     },
     groupIds: user.groupIds?.split(',')
   };

@@ -1,5 +1,5 @@
 import fs from 'fs';
-import spin from "../libs/spin.js";
+import spin from '../libs/spin.js';
 import { checkClient } from '../client.js';
 
 export const command = 'init [options]';
@@ -19,18 +19,17 @@ export const builder = (yargs) => {
 export function handler(argv) {
   spin.do(() => {
     return checkClient(argv.orgUrl, argv.token)
-    .then(() => persist(argv))
-    .catch((err) => console.log(`${err.status}: ${err.errorSummary}`));
-  });  
+      .then(() => persist(argv))
+      .catch((err) => console.log(`${err.status}: ${err.errorSummary}`));
+  });
 }
 
 function persist(argv) {
-  
-  fs.writeFile(".env", `ORG_URL=${argv.orgUrl}\nTOKEN=${argv.token}`, (err) => {
-    if (err)
+  fs.writeFile('.env', `ORG_URL=${argv.orgUrl}\nTOKEN=${argv.token}`, (err) => {
+    if (err) {
       return console.log(err);
+    }
   });
 
   console.log(`Success! All subsequent commands will be in the context of "${argv.orgUrl}". Happy days!`);
-
 }

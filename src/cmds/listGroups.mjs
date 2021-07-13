@@ -21,14 +21,14 @@ export const builder = (yargs) => {
       alias: 'o',
       description: 'specify output format',
       choices: ['table', 'json', 'csv'],
-      coerce: (opt => opt.toLowerCase())
+      coerce: opt => opt.toLowerCase()
     });
 }
 
 export function handler(argv) {
   spin.do(() => {
     const groups = [];
-    var options = buildSearchOptions(argv);
+    const options = buildSearchOptions(argv);
     return okta().listGroups(options)
       .each(group => groups.push(toSummary(group)))
       .catch((err) => out.log(`Error getting groups: ${err.message}`))
@@ -37,13 +37,15 @@ export function handler(argv) {
 }
 
 function buildSearchOptions(argv) {
-  var options = {};
+  const options = {};
 
-  if (argv.find)
+  if (argv.find) {
     options.q = argv.find;
+  }
 
-  if (argv.filter)
+  if (argv.filter) {
     options.filter = argv.filter;
+  }
 
   return options;
 }
