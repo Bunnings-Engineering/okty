@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2021 dflynn-bunnings
+Copyright (c) 2021 Bunnings Group Limited  (ABN  26 008 672 179).
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
