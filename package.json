@@ -32,7 +32,7 @@
     "eslint-plugin-promise": "^5.1.0"
   },
   "dependencies": {
-    "@okta/okta-sdk-nodejs": "^4.4.0",
+    "@okta/okta-sdk-nodejs": "^4.6.1",
     "csvtojson": "^2.0.10",
     "dotenv": "^8.2.0",
     "json2csv": "^5.0.6",
